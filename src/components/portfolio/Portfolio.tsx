@@ -80,7 +80,6 @@ const Portfolio = () => {
                         } else {
                             imgClass = style.normal;
                         }
-
                         return (
                             <div className={imgClass} key={id}>
                                 <img src={image} alt="portfolio images" />

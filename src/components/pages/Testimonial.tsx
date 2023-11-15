@@ -7,8 +7,6 @@ const CustomSlickNext = styled.div`
     right: 20px !important;
   }
 `;
-
-
 export default function Testimonial(){
     return (
         <div className={style.wrapper}>

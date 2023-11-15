@@ -64,7 +64,7 @@ export const Menu = [
       name: "Maggi",
       category: "product",
       description: "Lorem ipsum dolor sit amet",
-      imgSize:'large'
+      imgSize:'normal'
     },
     {
       id: 8,
@@ -89,6 +89,21 @@ export const Menu = [
       category: "photoshop",
       description: "Lorem ipsum dolor sit amet",
       imgSize:'large'
+    },{
+      id: 11,
+      image: img4,
+      name: "Egg Curry",
+      category: "photoshop",
+      description: "Lorem ipsum dolor sit amet",
+      imgSize:'small'
+    },
+    {
+      id: 12,
+      image: img6,
+      name: "Maggi",
+      category: "product",
+      description: "Lorem ipsum dolor sit amet",
+      imgSize:'normal'
     },
   ];
   
