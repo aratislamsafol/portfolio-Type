@@ -1,6 +1,6 @@
 
 import style from './card.module.scss';
-import {CardProps} from './Card.module';
+import {CardProps} from './Card.Module';
 export default function Card({img, hover, border, postion, company, jobType, startData, lastDate, job_status, job_description}:CardProps) {
 
   return (

@@ -14,7 +14,8 @@ export default function GetInTouch() {
         </div>
         
         <div style={{height:'350px', width:'100%', padding:'30px 0'}}>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58441.13427718633!2d90.41624589999999!3d23.727013100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1700042557519!5m2!1sen!2sbd" style={{height:'100%', width:'100%'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58441.13427718633!2d90.41624589999999!3d23.727013100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1700042557519!5m2!1sen!2sbd" style={{height:'100%', width:'100%'}} loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
   )
