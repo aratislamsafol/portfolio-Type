@@ -1,0 +1,17 @@
+.separated{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+}
+.separated:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 1px;
+    opacity: 0.1;
+    background: #0b0b13;
+}

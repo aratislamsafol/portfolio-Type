@@ -1,0 +1,21 @@
+.container{
+    padding: 30px;
+}
+.contact_box{
+    margin:40px 0;
+    background-color: var(--light_bg);
+}
+.contact_content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact_content h3{
+    color: var(--common_word);
+    display: flex;
+    gap:10px;
+}
+.contact_content i{
+    color: var(--common_color);
+    margin-top: 5px;
+}

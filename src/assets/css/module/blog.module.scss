@@ -1,0 +1,48 @@
+
+.content{
+    margin-top: 30px !important;
+    cursor: pointer;
+}
+.content img{
+    height: 100%;
+    width: 100%;
+}
+.blog_body{
+    position: relative;
+}
+.content_details{
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+.content_details span{
+    font-size: 13px;
+}
+.buttonItem{
+    display: flex;
+    justify-content: center;
+    margin:50px 0;
+}
+.button{
+    padding: 10px ;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

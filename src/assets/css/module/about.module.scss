@@ -1,0 +1,129 @@
+
+
+.combined_images{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 80px 0 ;
+}
+.combined_images img{
+    height: 100%;
+    width: 100%;
+}
+.myInfo{
+    display: flex;
+    flex-direction: column;
+    gap:31px;
+}
+.myInfo span{
+    color: gray;
+    line-height: 1.5;
+    font-size: 17px;
+}
+.myInfo .title{
+    color: var(--common_word);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 30px;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+.myInfo .title:after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    width: 60px;
+    background: #2fbf71;
+    height: 1px;
+}
+.myInfo .title:before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -7px;
+    left: 56px;
+    right: 0;
+    z-index: -1;
+    background: #2fbf71;
+}
+.myInfo h2{
+    font-size: 30px;
+}
+.completation{
+    display: flex;
+    gap:20px
+}
+.prject_complete, .client_satisfied{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    align-items: center;
+}
+.content h1{
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .big_device{
+        display: flex;
+        flex-direction: column;
+        gap:50px;
+        align-items: center;
+    }
+    .combined_images{
+        flex-basis: 30%;
+    }
+    .myInfo{
+        flex-basis: 70%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .big_device{
+        display: flex;
+        gap:50px;
+        align-items: center;
+        flex-direction: row;
+    }
+    .combined_images{
+        flex-basis: 35%;
+    }
+    .myInfo{
+        flex-basis: 65%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .combined_images{
+        flex-basis: 50%;
+    }
+    .myInfo{
+        flex-basis: 50%;
+    }
+}

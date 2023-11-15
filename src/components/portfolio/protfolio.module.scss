@@ -1,0 +1,59 @@
+
+.list_items {
+    display: flex;
+    list-style: none;
+    gap:10px;
+    justify-content: center;
+}
+.list_items li a{
+    font-size: 15px;
+    font-weight: 400;
+    color: #0b0b13;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.mainBody{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+}
+.mainBody img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small {
+    grid-column: span 1;
+}
+.normal {
+    grid-row: span 2;
+}
+.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+  @media only screen and (max-width: 600px) {
+    
+  }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+   
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+

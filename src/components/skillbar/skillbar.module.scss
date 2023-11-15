@@ -1,0 +1,32 @@
+.skill_bar{
+    background: rgba(11, 11, 19, 0.1);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.skill_bar_in{
+    width: 80px;
+    position: relative;
+    -moz-transition: ease all 0.55s;
+    -o-transition: ease all 0.55s;
+    -webkit-transition: ease all 0.55s;
+    transition: ease all 0.55s;
+    height: 5px;
+    background: #2fbf71;
+}
+.skill_bar_in span{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #2fbf71;
+    position: absolute;
+    right: -1px;
+    top: -5px;
+}
+.skii_bar_wrapper{
+   display: flex;
+   flex-direction: column;
+   gap:15px;
+}
