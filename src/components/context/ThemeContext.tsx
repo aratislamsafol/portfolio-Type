@@ -1,5 +1,5 @@
 // ThemeContext.tsx
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 
 type ThemeContextType = {
   isDarkMode: boolean;
@@ -8,11 +8,15 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const ThemeProvider = ({ children }) => {
+type ThemeProviderProps = {
+  children: ReactNode;
+}
+
+const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
-    setIsDarkMode((prevMode) => !prevMode);
+    setIsDarkMode((prevMode: boolean) => !prevMode);
   };
 
   return (

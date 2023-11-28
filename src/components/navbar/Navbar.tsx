@@ -3,7 +3,7 @@ import { useState } from 'react';
 import img1 from '../../assets/img/about-me.jpg';
 import { Spin as Hamburger } from 'hamburger-react';
 import { NavHashLink } from 'react-router-hash-link';
-
+declare module "react-router-hash-link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -95,7 +95,7 @@ export default function Navbar() {
                 <li key={index}>
                   <NavHashLink
                     to={item.to}
-                    activeClassName="active" smooth
+                     smooth
                   >
                     <i className="fa-solid fa-house"></i>
                     <p>{item.label}</p>
