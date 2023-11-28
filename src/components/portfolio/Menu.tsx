@@ -12,7 +12,7 @@ import img8 from '../../assets/img/m-portfolio-9.jpg'
 export const Menu = [
     {
       id: 1,
-      image: img,
+      image: img2,
       name: "Momb ios App",
       category: "branding",
       description: "Broadcasting ios App",
@@ -20,27 +20,27 @@ export const Menu = [
     },
     {
       id: 2,
-      image: img1,
+      image: img3,
       name: "Egg Curry",
       category: "photoshop",
-      description: "Lorem ipsum dolor sit amet",
-      imgSize:'small'
-    },
-    {
-      id: 3,
-      image: img2,
-      name: "Aloo Paratha",
-      category: "branding",
       description: "Lorem ipsum dolor sit amet",
       imgSize:'normal'
     },
     {
+      id: 3,
+      image: img4,
+      name: "Aloo Paratha",
+      category: "branding",
+      description: "Lorem ipsum dolor sit amet",
+      imgSize:'tall'
+    },
+    {
       id: 4,
-      image: img3,
+      image: img,
       name: "Maggi",
       category: "fashion",
       description: "Lorem ipsum dolor sit amet",
-      imgSize:'large'
+      imgSize:'wide'
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ export const Menu = [
       name: "Maggi",
       category: "branding",
       description: "Lorem ipsum dolor sit amet",
-      imgSize:'large'
+      imgSize:'normal'
     },
     {
       id: 6,
@@ -56,7 +56,7 @@ export const Menu = [
       name: "Maggi",
       category: "product",
       description: "Lorem ipsum dolor sit amet",
-      imgSize:'normal',
+      imgSize:'tall',
     },
     {
       id: 7,
@@ -64,7 +64,7 @@ export const Menu = [
       name: "Maggi",
       category: "product",
       description: "Lorem ipsum dolor sit amet",
-      imgSize:'normal'
+      imgSize:'big'
     },
     {
       id: 8,
@@ -72,7 +72,7 @@ export const Menu = [
       name: "Chaat Masala",
       category: "photoshop",
       description: "Lorem ipsum dolor sit amet",
-      imgSize:'large'
+      imgSize:'tall'
     },
     {
       id: 9,
@@ -80,7 +80,7 @@ export const Menu = [
       name: "Chaat Masala",
       category: "photoshop",
       description: "Lorem ipsum dolor sit amet",
-      imgSize:'small'
+      imgSize:'normal'
     },
     {
       id: 10,
@@ -88,17 +88,25 @@ export const Menu = [
       name: "Chaat Masala",
       category: "photoshop",
       description: "Lorem ipsum dolor sit amet",
-      imgSize:'large'
+      imgSize:'tall'
     },{
       id: 11,
       image: img4,
       name: "Egg Curry",
       category: "photoshop",
       description: "Lorem ipsum dolor sit amet",
-      imgSize:'small'
+      imgSize:'normal'
     },
     {
       id: 12,
+      image: img6,
+      name: "Maggi",
+      category: "product",
+      description: "Lorem ipsum dolor sit amet",
+      imgSize:'big'
+    },
+    {
+      id: 13,
       image: img6,
       name: "Maggi",
       category: "product",

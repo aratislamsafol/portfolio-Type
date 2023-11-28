@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300;400&family=Rubik:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -9,11 +12,14 @@
     --light_bg: #f7f7ff;
     --border: rgb(231, 230, 230)
 }
+body{
+    font-family: sans-serif, monospace,'Rubik';
+}
 h1{
     font-size: 45px;
 }
 h3{
-    font-size: 30px;
+    font-size: 22px;
 }
 .container{
     padding:15px;
@@ -28,7 +34,7 @@ h3{
     position: relative;
     z-index: 1;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 22px;
     display: inline-block;
     vertical-align: top;
     text-transform: uppercase;
@@ -56,40 +62,61 @@ h3{
     z-index: -1;
     background: #2fbf71;
 }
+.active{
+    color:#2fbf71;
+}
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    h3{
+        font-size: 20px;
+    }
     .main_wrapper{
         display: flex;
         flex-direction: column;
         width: 510px;
         margin: auto;
     }
+    .title{
+        font-size: 25px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    h3{
+        font-size: 21px;
+    }
     .main_wrapper{
         display: flex;
         flex-direction: column;
         width: 690px;
         margin: auto;
     }
+    .title{
+        font-size: 27px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    h3{
+        font-size: 23px;
+    }
     .main_wrapper{
         width: 100%;
     }
-   
+    .title{
+        font-size: 30px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    h3{
+        font-size: 25px;
+    }
     .main_wrapper{
         max-width: 1140px;
         margin-right: 250px;
@@ -97,5 +124,11 @@ h3{
     .topNav{
         margin-left:250px;
     }
+    .title{
+        font-size: 30px;
+    }
 }
+
+
+
 

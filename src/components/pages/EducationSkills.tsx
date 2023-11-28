@@ -40,7 +40,7 @@ const EducationSkills = () => {
             <SkillBar />
           </div>
         </div>
-        
+
         <SpaceBar />
       </div>
     </div>

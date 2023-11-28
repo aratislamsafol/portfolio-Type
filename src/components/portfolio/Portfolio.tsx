@@ -1,97 +1,77 @@
-import { useState } from "react";
-import {Menu} from "./Menu";
-import style from './protfolio.module.scss';
+import { useState, useEffect } from "react";
+import { Menu } from "./Menu";
+import style from "./protfolio.module.scss";
 
 const Portfolio = () => {
   const [items, setItems] = useState(Menu);
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState("All");
 
-  const filterItem = (categoryItem:string) => {
-    const updateItems = Menu.filter((curElem) => {
-      return curElem.category === categoryItem;
-    });
+  useEffect(() => {
+    // Set initial items when the component mounts
+    filterItem("All");
+  }, []);
 
+  const filterItem = (categoryItem: string) => {
+    setActive(categoryItem);
+    const updateItems =
+      categoryItem === "All"
+        ? Menu
+        : Menu.filter((curElem) => curElem.category === categoryItem);
     setItems(updateItems);
-    setActive(true);
   };
-  
+
   return (
     <>
-        <div className={style.wrapper}>
-            <div className="container">
-                <ul className={style.list_items}>
-                    <li className="nav-item">
-                        <a
-                        className={active ? "nav-link" : "nav-link active"}
-                        href="javascript:void(0);"
-                        onClick={() => setItems(Menu)}
-                        >
-                        All
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className={active ? "nav-link" : "nav-link active"}
-                        href="javascript:void(0);"
-                        onClick={() => filterItem("branding")}
-                        >
-                        branding
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className={active ? "nav-link" : "nav-link active"}
-                        href="javascript:void(0);"
-                        onClick={() => filterItem("photoshop")}
-                        >
-                        Photoshop
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a
-                        className={active ? "nav-link" : "nav-link active"}
-                        href="javascript:void(0);"
-                        onClick={() => filterItem("fashion")}
-                        >
-                        Fashion
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a
-                        className={active ? "nav-link" : "nav-link active"}
-                        href="javascript:void(0);"
-                        onClick={() => filterItem("product")}
-                        >
-                        product
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
+      <div className={`${style.wrapper}`}>
         <div className="container">
-            <div className="row">
-                <div className={style.mainBody}>
-                    {items.map((item) => {
-                        const { id, image, imgSize } = item;
-                        let imgClass;
-                        if (imgSize === 'small') {
-                            imgClass = style.small;
-                        } else if (imgSize === 'large') {
-                            imgClass = style.large;
-                        } else {
-                            imgClass = style.normal;
-                        }
-                        return (
-                            <div className={imgClass} key={id}>
-                                <img src={image} alt="portfolio images" />
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
+          <ul className={style.list_items}>
+            {["All", "branding", "photoshop", "fashion", "product"].map(
+              (category) => (
+                <li className="nav-item" key={category}>
+                  <a
+                    className={
+                      active === category
+                        ? `${style.navLink} ${style.active}`
+                        : style.navLink
+                    }
+                    href="javascript:void(0);"
+                    onClick={() => filterItem(category)}
+                  >
+                    {category}
+                  </a>
+                </li>
+              )
+            )}
+          </ul>
         </div>
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className={`${style.grid_wrapper}`}>
+            {items.map((item) => {
+              const { id, image, imgSize } = item;
+              let imgClass;
+              if (imgSize === "wide") {
+                imgClass = style.wide;
+              } else if (imgSize === "tall") {
+                imgClass = style.tall;
+              } else if (imgSize === "normal") {
+                imgClass = style.normal;
+              } else {
+                imgClass = style.big;
+              }
+              return (
+                <div className={imgClass} key={id}>
+                  <img src={image} alt="portfolio images" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </>
   );
 };
 
 export default Portfolio;
-

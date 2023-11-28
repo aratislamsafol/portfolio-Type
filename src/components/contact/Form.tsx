@@ -1,65 +1,74 @@
-import { useForm } from 'react-hook-form';
+import React, { FC, useRef, useState } from 'react';
 import Input from '../input/Input';
 import EffectButton from '../button/EffectButton';
 import style from './form.module.scss';
-type FormData = {
-    name:string,
-    subject:string,
-    email: string,
-    textarea?: string,
-}
+import emailjs from '@emailjs/browser';
 
-// use useForm For form data
-const Form = () => {
-  const {register,handleSubmit,formState: { errors }} = useForm<FormData>();
+interface FormProps {}
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+const Form: FC<FormProps> = () => {
+  const form = useRef<HTMLFormElement>(null);
+  const [userName, setUserName] = useState<string>('');
+  const [userEmail, setUserEmail] = useState<string>('');
+  const [userSubject, setUserSubject] = useState<string>('');
+  const [userMessage, setUserMessage] = useState<string>('');
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!userName || !userEmail || !userSubject || !userMessage) {
+      console.log('Please fill in all required fields');
+      return;
+    }
+    const templateParams = {
+      user_name: userName,
+      user_email: userEmail,
+      user_subject: userSubject,
+      user_message: userMessage
+    };
+
+    emailjs
+      .send('service_hneax3y', 'template_feu7yfk', templateParams, '8Rvs63pbji9WmvVRW')
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    if (name === 'user_name') {
+      setUserName(value);
+    } else if (name === 'user_email') {
+      setUserEmail(value);
+    } else if (name === 'user_subject') {
+      setUserSubject(value);
+    } else if (name === 'user_message') {
+      setUserMessage(value);
+    }
   };
 
   return (
-    
-      <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
-        <div className={style.form_control}>
-          <Input placeholder='Name*' type="text" {...register("name", {required: true})}/>
+    <form ref={form} onSubmit={sendEmail} className={style.form}>
+      <div className={style.form_control}>
+        <Input type="text" placeholder='Name*' name="user_name" value={userName} onChange={handleInputChange} />
+      </div>
+      <div className={style.form_control}>
+        <Input type="text" placeholder='Email*' name="user_email" value={userEmail} onChange={handleInputChange} />
+      </div>
+      <div className={style.form_control}>
+        <Input type="text" placeholder='Subject*' name="user_subject" value={userSubject} onChange={handleInputChange} />
+      </div>
 
-          {errors.name && errors.name.type === "required" && (
-            <p className={style.errorMsg}>Name is required.</p>
-          )}
-
-        </div>
-        <div className={style.form_control}>
-          <Input placeholder='Email*' type="text" {...register("email", {required: true, pattern: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/})}/>
-
-          {errors.email && errors.email.type === "required" && (
-            <p className={style.errorMsg}>Email is required.</p>
-          )}
-          {errors.email && errors.email.type === "pattern" && (
-            <p className={style.errorMsg}>Email is not valid.</p>
-          )}
-        </div>
-
-        <div className={style.form_control}>
-          <Input placeholder='subject*' type="text" {...register("subject", {required: true})}/>
-
-          {errors.subject && errors.subject.type === "required" && (
-            <p className={style.errorMsg}>Subject is required.</p>
-          )}
-        </div>
-        
-        <div className={style.form_control}>
-          <Input type="textarea" placeholder='Your message*' {...register("textarea", {required: true, minLength: 12})}/>
-          
-          {errors.textarea && errors.textarea.type === "minLength" && (
-            <p className={style.errorMsg}>
-              TextArea should be at least 12 characters.
-            </p>
-          )}
-        </div>
-       
-        <EffectButton type="submit" children="send message"/>
-      </form>
-  
+      <div className={style.form_control}>
+        <Input type="textarea" placeholder='Your message*' name="user_message" value={userMessage} onChange={handleInputChange} />
+      </div>
+      <EffectButton type="submit" children="Send" />
+    </form>
   );
 };
 

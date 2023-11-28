@@ -3,7 +3,7 @@ import style from '../../assets/css/module/getintouch.module.scss';
 import Form from "../contact/Form";
 export default function GetInTouch() {
   return (
-    <div className="container">
+    <div className="container" id="contact">
         <h1 className="title">Get In Touch</h1>
         <div className={style.content}>
             <ContactInfo />

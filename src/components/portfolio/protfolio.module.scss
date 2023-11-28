@@ -1,40 +1,78 @@
-
-.list_items {
+.fadeIn {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fadeOut {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .list_items {
     display: flex;
     list-style: none;
-    gap:10px;
+    gap: 10px;
     justify-content: center;
-}
-.list_items li a{
+  }
+  
+  .list_items li a {
     font-size: 15px;
     font-weight: 400;
     color: #0b0b13;
     text-decoration: none;
     text-transform: uppercase;
+  }
+  
+  /* Add new styles for active link */
+  .navLink {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navLink:hover {
+    color: #555; /* Change to the desired hover color */
+  }
+  
+  .active {
+    color: #555; /* Change to the desired active color */
+  }
+  
+
+/* Main CSS */
+.grid_wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.mainBody{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-    grid-auto-flow: dense;
+.grid_wrapper > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
 }
-.mainBody img {
-    max-height: 300px;
-    max-width: 250px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.grid_wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
 }
-.small {
-    grid-row: auto/span 1;
+.wide {
+	grid-column: span 2;
 }
-.normal {
-    grid-row: auto/span 1;
+.tall {
+	grid-row: span 2;
 }
-.large {
-    grid-column: auto/span 1;
-    grid-row: auto/span 1;
+.big {
+	grid-column: span 2;
+	grid-row: span 2;
 }
+.normal{
+    grid-column: span 1;
+	grid-row: span 1;
+}
+
   @media only screen and (max-width: 600px) {
     
   }

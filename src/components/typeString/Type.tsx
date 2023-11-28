@@ -1,13 +1,12 @@
 import { Typewriter } from 'react-simple-typewriter'
-
+import style from './autotypingeffect.module.scss';
 const TypeWritter = () => {
   return (
     <div className='App'>
-      <h3 style={{ fontWeight: 'thin', textTransform:'uppercase', fontSize:'16px' }}>
+      <h3 className={style.heading}>
         I am{' '}
         <span>
-          <Typewriter
-            words={['Developer', 'Coder', 'Web Designer', 'FreeLancer!']}
+          <Typewriter words={['Developer', 'Coder', 'Web Designer', 'FreeLancer!']}
             loop={5}
             cursor
             cursorStyle='|'

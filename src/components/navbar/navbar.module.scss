@@ -12,7 +12,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
 }
 .nav_bars{
     background-color: #2fbf71;
@@ -99,7 +100,7 @@
 
 }
 .active{
-    color: #2fbf71;
+    color: #2fbf71 !important;
 }
 .social_icon{
     width: calc(100%);

@@ -24,17 +24,18 @@ export default function Home() {
             label: 'fa-pinterest',
             to:''
         },
-    ]
+    ];
+    
     return (
-        <div className={style.wrapper}>
+        <div className={style.wrapper} id="home">
             <div className={style.container}>
                 <div className={`${style.content}`}>
                     <img src={img} alt="banner Img" />
                 </div>
                 <div className={style.info}>
-                    <h1 style={{marginTop: '10px'}}>Arat Islam</h1>
+                    <h1 style={{marginTop: '10px'}}>Khan Kamrul Islam</h1>
                     <AutoTypingEffect />
-                    
+            
                     <div className={style.social_icon}>
                         {socialIcon.map((icon, index)=>
                             <a href="" key={index}><i className={`fa-brands ${icon.label}`}></i></a>

@@ -5,7 +5,7 @@ import EffectButton from '../button/EffectButton';
 export default function Blog() {
     
     return (
-        <div className={style.wrapper}>
+        <div className={style.wrapper} id="blog">
             <div className={`container ${style.content}`}>
                 <h1 className="title">Latest blog</h1>
                 <BlogBody />

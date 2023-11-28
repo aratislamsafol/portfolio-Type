@@ -25,7 +25,7 @@
     position: relative;
     z-index: 1;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 22px;
     display: inline-block;
     vertical-align: top;
     text-transform: uppercase;
@@ -54,7 +54,7 @@
     background: #2fbf71;
 }
 .myInfo h2{
-    font-size: 30px;
+    font-size: 22px;
 }
 .completation{
     display: flex;
@@ -77,13 +77,12 @@
     line-height: 1;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    .myInfo .title{
+        font-size: 25px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -100,10 +99,16 @@
     .myInfo{
         flex-basis: 70%;
     }
+    .myInfo .title{
+        font-size: 27px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .myInfo .title{
+        font-size: 30px;
+    }
     .big_device{
         display: flex;
         gap:50px;
@@ -116,6 +121,9 @@
     .myInfo{
         flex-basis: 65%;
     }
+    .myInfo h2{
+        font-size: 28px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -125,5 +133,8 @@
     }
     .myInfo{
         flex-basis: 50%;
+    }
+    .myInfo h2{
+        font-size: 30px;
     }
 }
