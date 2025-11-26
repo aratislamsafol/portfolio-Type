@@ -1,13 +1,12 @@
 .wrapper {
   margin: 0 !important;
   padding: 50px 0;
-  background-color: red;
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease-in-out;
 }
 
-.wrapper.show {
+.wrapper:global(.show) {
   opacity: 1;
   transform: translateY(0);
 }
