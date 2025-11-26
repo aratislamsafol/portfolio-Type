@@ -1,6 +1,6 @@
 import style from './blog.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { blogData, BlogData } from '../../data/blogData';
+import { blogData } from '../../data/blogData';
 
 interface BlogBodyProps {
     showCount?: number;
@@ -10,7 +10,7 @@ export default function BlogBody({ showCount = 4 }: BlogBodyProps) {
     const navigate = useNavigate();
     const displayedBlogs = blogData.slice(0, showCount);
 
-    const handleBlogClick = (blogId: number, e: React.MouseEvent) => {
+    const handleBlogClick = (blogId: number) => {
         // Save scroll position before navigating
         const scrollPosition = window.scrollY;
         sessionStorage.setItem('blogScrollPosition', scrollPosition.toString());
@@ -25,7 +25,7 @@ export default function BlogBody({ showCount = 4 }: BlogBodyProps) {
                     <div 
                         className={style.blog_body} 
                         key={blog.id}
-                        onClick={(e) => handleBlogClick(blog.id, e)}
+                        onClick={() => handleBlogClick(blog.id)}
                         style={{ cursor: 'pointer' }}
                     >
                         <img src={blog.src} alt="blog Image" />
