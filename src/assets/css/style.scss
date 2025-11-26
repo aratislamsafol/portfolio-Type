@@ -43,7 +43,7 @@ h3{
 .title:after{
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: -10px;
     left: 0;
     right: 0;
     width: 60px;
@@ -56,7 +56,7 @@ h3{
     height: 6px;
     border-radius: 50%;
     position: absolute;
-    bottom: -7px;
+    bottom: -12px;
     left: 56px;
     right: 0;
     z-index: -1;
@@ -91,11 +91,18 @@ h3{
     .main_wrapper{
         display: flex;
         flex-direction: column;
-        width: 690px;
+        width: 95%;
         margin: auto;
     }
     .title{
         font-size: 27px;
+    }
+}
+
+/* Reduce container padding for 600px-991px range */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+    .container{
+        padding: 8px;
     }
 }
 

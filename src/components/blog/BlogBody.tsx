@@ -4,10 +4,10 @@ import img1 from '../../assets/img/blog-2.jpg';
 import img2 from '../../assets/img/blog-3.jpg';
 export default function BlogBody() {
     const blogImage = [
-        {id:1, src:img, date:'12/FEB/2022', comment:'I Will Tell You The Truth About Design In The Next 60 Seconds.' }, 
-        {id:2, src:img1, date:'12/FEB/2022', comment:'I Will Tell You The Truth About Design In The Next 60 Seconds.' },
-        {id:3, src:img2, date:'12/FEB/2022', comment:'I Will Tell You The Truth About Design In The Next 60 Seconds.' },
-        {id:4, src:img, date:'12/FEB/2022', comment:'I Will Tell You The Truth About Design In The Next 60 Seconds.' },
+        {id:1, src:img, date:'15/MAR/2024', comment:'Building Scalable Microservices Architecture: Best Practices and Patterns' }, 
+        {id:2, src:img1, date:'08/FEB/2024', comment:'Modern Frontend Development: React Performance Optimization Techniques' },
+        {id:3, src:img2, date:'22/JAN/2024', comment:'Cloud-Native Applications: A Complete Guide to AWS Deployment Strategies' },
+        {id:4, src:img, date:'05/DEC/2023', comment:'Code Review Best Practices: How to Write Maintainable and Clean Code' },
     ];
     return (
     <div className={style.content}>
