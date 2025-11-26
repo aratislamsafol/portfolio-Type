@@ -12,6 +12,16 @@ export default function Main() {
   const [isLoading, setIsLoading] = useState(true);
   // create fake db or data for load and get the time request time to setTime
   useEffect(() => {
+    // Check if coming back from blog page (no loader needed)
+    const isReturningFromBlog = sessionStorage.getItem('returningFromBlog');
+    
+    if (isReturningFromBlog) {
+      setIsLoading(false);
+      sessionStorage.removeItem('returningFromBlog');
+      return;
+    }
+
+    // First time load - show loader
     const fakeDataFetch = () => {
       setTimeout(() => {
         setIsLoading(false);
