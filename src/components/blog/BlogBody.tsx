@@ -11,12 +11,12 @@ export default function BlogBody() {
     ];
     return (
     <div className={style.content}>
-        {blogImage.map(bImg=>{
+        {blogImage.map((bImg, id)=>{
             return (
                 <div className={style.blog_body} key={bImg.id}>
                     <img src={bImg.src} alt="blog Image " />
                     <div className={style.content_details}>
-                        <span>{bImg.date} - WEBSITE - 1 COMMENT</span>
+                        <span>{bImg.date} - Blog-{id+1}</span>
                         <h3>{bImg.comment}</h3>
                     </div>
                 </div>

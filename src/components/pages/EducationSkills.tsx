@@ -1,6 +1,6 @@
-import style from '../../assets/css/module/edutcation.module.scss';
-import SkillBar from '../skillbar/SkillBar';
-import SpaceBar from '../spacebar/SpaceBar';
+import style from "../../assets/css/module/edutcation.module.scss";
+import SkillBar from "../skillbar/SkillBar";
+import SpaceBar from "../spacebar/SpaceBar";
 
 interface EducationProps {
   session_start: string;
@@ -11,11 +11,44 @@ interface EducationProps {
 }
 
 const EducationSkills = () => {
-  const educationData: EducationProps[] = [
-    { session_start: '2020', session_end: '2022', course: 'Graphics Designer', institution: 'International Design Institute', gpa: '' },
-    { session_start: '2020', session_end: '2022', course: 'Web Development', institution: 'International Design Institute', gpa: '' },
-    { session_start: '2020', session_end: '2022', course: 'Search Engine Optimization', institution: 'International Design Institute', gpa: '' },
-  ];
+const educationData: EducationProps[] = [
+  {
+    session_start: "2012",
+    session_end: "2016",
+    course: "Bachelor of Science in Computer Science",
+    institution: "Massachusetts Institute of Technology (MIT)",
+    gpa: "3.9/4.0",
+  },
+  {
+    session_start: "2016",
+    session_end: "2018",
+    course: "Master of Science in Software Engineering",
+    institution: "Stanford University",
+    gpa: "4.0/4.0",
+  },
+  {
+    session_start: "2018",
+    session_end: "2019",
+    course: "Professional Certification in Cloud & DevOps",
+    institution: "Amazon Web Services (AWS) Training",
+    gpa: "",
+  },
+  {
+    session_start: "2019",
+    session_end: "2020",
+    course: "Advanced Cloud & Systems Architecture",
+    institution: "Carnegie Mellon University",
+    gpa: "",
+  },
+  {
+    session_start: "2021",
+    session_end: "2022",
+    course: "Executive Leadership in Software Engineering",
+    institution: "Harvard Extension School",
+    gpa: "",
+  },
+];
+
 
   return (
     <div className={style.wrapper}>
@@ -24,23 +57,37 @@ const EducationSkills = () => {
         {/* education */}
         <div className={`${style.big_display}`}>
           <div>
-            {educationData.map((data, index)=>
+            {educationData.map((data, index) => (
               <div key={index} className={style.education_box}>
-                <span>{data.session_start} - {data.session_end}</span>
+                <span>
+                  {data.session_start} - {data.session_end}
+                </span>
                 <h3>{data.course}</h3>
                 <p>{data.institution}</p>
               </div>
-            )}
+            ))}
           </div>
-          
+
           {/* skills */}
           <div className={style.skills}>
-            <h1 style={{fontWeight:'600', fontSize:'30px', letterSpacing: '6px', marginBottom:'20px'}}>My skills</h1>
-            <span>I'm a Freelancer Front-end Developer with over 3 years of experience. I code and create web elements for amazing people around the world. I like work with new people. New people new Experiences.</span>
+            <h1
+              style={{
+                fontWeight: "600",
+                fontSize: "30px",
+                letterSpacing: "6px",
+                marginBottom: "20px",
+              }}
+            >
+              My Technical Expertise
+            </h1>
+            <span>
+I’m a Chief Software Engineer with 8+ years of experience designing and building scalable, high-performance web applications. I specialize in leading complex projects, architecting robust systems, and mentoring engineering teams to deliver high-quality solutions. My focus is on writing clean, efficient code, optimizing user experiences, and implementing innovative solutions that drive real business impact.
+</span>
+
             <SkillBar />
           </div>
         </div>
-        
+
         <SpaceBar />
       </div>
     </div>

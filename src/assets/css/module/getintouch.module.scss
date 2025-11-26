@@ -1,6 +1,7 @@
 .content{
     display: grid;
     grid-template-columns: 1;
+    align-items: center;
 }
 .wrapper{
     background-color: var(--light_bg);

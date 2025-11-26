@@ -27,7 +27,7 @@ export default function Main() {
      
     {isLoading? <Loader />:
       <div className="topNav">  
-        <div style={{ position: 'sticky',top: 0, zIndex:'25', background:'white'}}>
+        <div style={{ position: 'sticky',top: 0, zIndex:'25', background:'red'}}>
           <Navbar />
         </div>
         <Home/>
